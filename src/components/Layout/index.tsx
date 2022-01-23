@@ -1,6 +1,7 @@
 import { NextComponentType } from 'next';
 import Sidebars from './Sidebars';
 import Navbar from './Navbar';
+
 export const Layout: NextComponentType = ({ children }) => {
 	return (
 		<section className='Layout d-flex vh-100'>
