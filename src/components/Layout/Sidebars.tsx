@@ -1,8 +1,11 @@
 import { NextComponentType } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export const Sidebars: NextComponentType = () => {
+	const router = useRouter();
+
 	return (
 		<div className='Sidebars h-100 d-flex flex-column flex-shrink-0 p-3 text-white bg-dark'>
 			<a className='d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none'>
@@ -14,7 +17,9 @@ export const Sidebars: NextComponentType = () => {
 				<li className='nav-item'>
 					<Link href='/'>
 						<a
-							className='nav-link active d-flex align-items-center gap-2 lh-1'
+							className={`nav-link text-white d-flex align-items-center gap-2 lh-1 ${
+								router.pathname === '/' && 'active'
+							}`}
 							aria-current='page'
 						>
 							<Image src='/image/home.svg' alt='Home' width='20' height='20' />
@@ -25,8 +30,9 @@ export const Sidebars: NextComponentType = () => {
 				<li className='nav-item'>
 					<Link href='/categories'>
 						<a
-							href='#'
-							className='nav-link text-white d-flex align-items-center gap-2 lh-1'
+							className={`nav-link text-white d-flex align-items-center gap-2 lh-1 ${
+								router.pathname === '/categories' && 'active'
+							}`}
 							aria-current='page'
 						>
 							<Image
@@ -42,7 +48,9 @@ export const Sidebars: NextComponentType = () => {
 				<li className='nav-item'>
 					<Link href='/posts'>
 						<a
-							className='nav-link text-white d-flex align-items-center gap-2 lh-1'
+							className={`nav-link text-white d-flex align-items-center gap-2 lh-1 ${
+								router.pathname === '/posts' && 'active'
+							}`}
 							aria-current='page'
 						>
 							<Image src='/image/post.svg' alt='post' width='20' height='20' />
@@ -53,8 +61,9 @@ export const Sidebars: NextComponentType = () => {
 				<li className='nav-item'>
 					<Link href='/users'>
 						<a
-							href='#'
-							className='nav-link text-white d-flex align-items-center gap-2 lh-1'
+							className={`nav-link text-white d-flex align-items-center gap-2 lh-1 ${
+								router.pathname === '/users' && 'active'
+							}`}
 							aria-current='page'
 						>
 							<Image
@@ -71,8 +80,9 @@ export const Sidebars: NextComponentType = () => {
 				<li className='nav-item'>
 					<Link href='/profile'>
 						<a
-							href='#'
-							className='nav-link text-white d-flex align-items-center gap-2 lh-1'
+							className={`nav-link text-white d-flex align-items-center gap-2 lh-1 ${
+								router.pathname === '/profile' && 'active'
+							}`}
 							aria-current='page'
 						>
 							<Image
@@ -86,6 +96,10 @@ export const Sidebars: NextComponentType = () => {
 					</Link>
 				</li>
 			</ul>
+			<hr />
+			<p className='text-center m-0'>
+				<strong>User: </strong> Renny Petit
+			</p>
 		</div>
 	);
 };

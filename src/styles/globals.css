@@ -19,8 +19,17 @@ a:hover {
 	box-sizing: border-box;
 }
 
-nav {
+.Navbar nav {
 	height: 70px;
+}
+h1 {
+	font-size: 1.4rem;
+}
+h2 {
+	font-size: 1.3rem;
+}
+.table tr {
+	cursor: pointer;
 }
 
 .Sidebars {
