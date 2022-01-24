@@ -5,7 +5,7 @@ import Table from '@components/Table';
 const Categories: NextPage = () => {
 	return (
 		<Layout>
-			<div className='Page-home container'>
+			<div className='Page-home container p-4'>
 				<Table />
 			</div>
 		</Layout>

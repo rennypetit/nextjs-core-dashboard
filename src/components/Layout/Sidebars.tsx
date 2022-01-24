@@ -76,6 +76,26 @@ export const Sidebars: NextComponentType = () => {
 						</a>
 					</Link>
 				</li>
+
+				<li className='nav-item'>
+					<Link href='/image'>
+						<a
+							className={`nav-link text-white d-flex align-items-center gap-2 lh-1 ${
+								router.pathname === '/image' && 'active'
+							}`}
+							aria-current='page'
+						>
+							<Image
+								src='/image/image.svg'
+								alt='image'
+								width='20'
+								height='20'
+							/>
+							<span>Image</span>
+						</a>
+					</Link>
+				</li>
+
 				<hr />
 				<li className='nav-item'>
 					<Link href='/profile'>
